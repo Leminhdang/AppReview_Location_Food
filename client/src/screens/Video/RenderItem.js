@@ -1,15 +1,10 @@
-import React, {useState, useContext, useEffect} from 'react';
-import FeatherIcon from 'react-native-vector-icons/Feather';
-import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {View, Text, SafeAreaView, Image} from 'react-native';
-import VideoPlayer from 'react-native-video-controls';
-import styles from './style';
-import {API_HOST, API_KEY} from '@env';
-import {formatDate} from '../../helpers/formatDate';
-import numberProcessing from '../../helpers/numberProcessing';
-import {AuthContext} from '../../Provider/AuthProvider';
-import axios from 'axios';
+import React, {useContext, useState} from 'react';
+import {SafeAreaView, Text, View} from 'react-native';
 import FastImage from 'react-native-fast-image';
+import VideoPlayer from 'react-native-video-controls';
+import {formatDate} from '../../helpers/formatDate';
+import {AuthContext} from '../../Provider/AuthProvider';
+import styles from './style';
 const RenderItem = ({item, visibleItem, index}) => {
   const [more, setMore] = useState(false);
   const {user} = useContext(AuthContext);

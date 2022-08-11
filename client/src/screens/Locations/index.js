@@ -12,6 +12,7 @@ import axios from 'axios';
 import {API_HOST, API_KEY} from '@env';
 import Item from './Item';
 import {useNavigation} from '@react-navigation/core';
+
 const Location = () => {
   const navigation = useNavigation();
   const [data, setData] = useState([]);
